@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Merriweather: "Merriweather", Noto-sans;
+  --container-width: 1200px;
+  --container-padding: 16px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: inherit;
+}
+
+a,
+input,
+label,
+span,
+textarea,
+button {
+  display: inline-block;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.body {
+  background: #191411;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /*100% область видимости*/
+  font-family: var(--Merriweather);
+  font-weight: normal;
+}
+
+.body > * {
+  flex-shrink: 0; /*не сжимать данные*/
+}
+
+.body > main {
+  flex-grow: 1;
+}
+
+.container {
+  width: calc(var(--container-width) + (var(--container-padding) * 2));
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+}
+
+.header {
+  padding: 0;
+}
+
+.header-row {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-menu > * {
+  padding-right: 88px;
+}
+
+.header-menu {
+  color: #fff;
+}
+
+.currency {
+  color: #fff;
+  padding: 15px 18px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-family: var(--Merriweather);
+}
+
+.main {
+  position: relative;
+  padding: 0;
+}
+
+.banner {
+  width: 450px;
+  height: 648px;
+  position: absolute;
+  margin-left: 360px;
+  margin-top: 132px;
+  margin-right: 888px;
+  margin-bottom: 200px;
+}
+
+.menu-card {
+  background: #d3320f;
+  color: #fff;
+  padding: 12px 16px;
+  gap: 10px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: var(--Merriweather);
+}
+
+.banner-content {
+  font-size: 16px;
+  color: #fff;
+  font-family: var(--Merriweather);
+  padding: 56px 0;
+}
+
+.button {
+  width: 260px;
+  height: 62px;
+  gap: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #da8023 0%, #e2b438 100%);
+  border: 0;
+}
+
+.button-text {
+  color: #191411;
+}
+
+.main-burger {
+  position: absolute;
+  padding-left: 560px;
+  padding-right: 64px;
+  padding-bottom: 0;
+}
+
+.banner-title {
+  padding: 10px 0;
+}
+
+.title-1 {
+  margin: 0 auto;
+  padding-top: 0;
+  color: #fff;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+
+/* footer */
+
+.footer {
+  padding: 0;
+}
+
+.footer-row {
+  padding: 60px 0;
+  color: #fff;
+  font-family: var(--Merriweather);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
