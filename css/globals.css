@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+@import "./../fonts/fonts.css";
 
 :root {
-  --Merriweather: "Merriweather", Noto-sans;
+  --merriweather: "Merriweather", serif;
+  --gilroy: "Gilroy";
   --container-width: 1200px;
   --container-padding: 16px;
 }
@@ -59,13 +60,23 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh; /*100% область видимости*/
-  font-family: var(--Merriweather);
+  min-height: 100vh;
+  font-family: var(--gilroy);
   font-weight: normal;
 }
 
 .body > * {
-  flex-shrink: 0; /*не сжимать данные*/
+  flex-shrink: 0;
+}
+
+.header {
+  position: relative;
+  min-height: 1080px;
+  background-image: url("../img/Group-1.png");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100vw;
+  overflow: hidden;
 }
 
 .body > main {
@@ -78,96 +89,337 @@ a {
   margin: 0 auto;
 }
 
-.header {
-  padding: 0;
-}
-
 .header-row {
-  padding: 60px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 0;
   gap: 10px;
+  color: #fff;
 }
 
-.header-menu > * {
-  padding-right: 88px;
+.header-menu * {
+  padding: 0 88px;
 }
 
 .header-menu {
-  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
 }
 
 .currency {
-  color: #fff;
-  padding: 15px 18px;
-  border: 1px solid;
+  padding: 11.5px 17.5px;
+  background-color: inherit;
+  color: white;
+  border: 1px solid white;
   border-radius: 5px;
-  font-family: var(--Merriweather);
 }
 
-.main {
+.about-us {
   position: relative;
-  padding: 0;
+  background-image: url("../img/Group-2.png");
+  min-height: 607px;
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100vw;
+  overflow: hidden;
+  align-items: center;
 }
 
-.banner {
-  width: 450px;
+.daily-attention {
+  width: 608px;
   height: 648px;
-  position: absolute;
-  margin-left: 360px;
-  margin-top: 132px;
-  margin-right: 888px;
-  margin-bottom: 200px;
+  left: 350px;
+  top: 200px;
+  right: 952px;
 }
 
-.menu-card {
-  background: #d3320f;
+.daily-content {
+  font-size: 24px;
+  font-family: var(--gilroy);
   color: #fff;
-  padding: 12px 16px;
-  gap: 10px;
-  border-radius: 50px;
-  font-size: 18px;
-  font-family: var(--Merriweather);
-}
-
-.banner-content {
-  font-size: 16px;
-  color: #fff;
-  font-family: var(--Merriweather);
+  line-height: 1;
   padding: 56px 0;
 }
 
+.card-title {
+  width: 324px;
+  font-size: 24px;
+  font-family: var(--gilroy);
+  color: #fff;
+  line-height: 1;
+  padding: 20px 0;
+}
+
+.product-title {
+  width: 290px;
+  font-size: 22px;
+  font-family: var(--gilroy);
+  color: #fff;
+  line-height: 1;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.card-content {
+  font-size: 16px;
+  font-family: var(--gilroy);
+  line-height: 1.4;
+  color: #fff;
+}
+
 .button {
+  background: #d3320f;
+  border-radius: 50px;
+  border: 0;
+}
+
+.button-primary {
   width: 260px;
   height: 62px;
-  gap: 10px;
+  gap: 24px;
   border-radius: 8px;
   background: linear-gradient(to right, #da8023 0%, #e2b438 100%);
   border: 0;
 }
 
-.button-text {
-  color: #191411;
-}
-
-.main-burger {
-  position: absolute;
-  padding-left: 560px;
-  padding-right: 64px;
-  padding-bottom: 0;
-}
-
-.banner-title {
-  padding: 10px 0;
+.title-1 > * + * {
+  padding: 56px 0;
 }
 
 .title-1 {
-  margin: 0 auto;
-  padding-top: 0;
-  color: #fff;
   font-size: 100px;
+  line-height: 1.3;
+  font-family: var(--merriweather);
   text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.title-2 {
+  font-family: var(--merriweather);
+  color: #fff;
+  font-size: 64px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about-attention {
+  position: relative;
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+  font-family: var(--gilroy);
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+  padding: 60px 32px 180px;
+}
+
+.card {
+  width: 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.card-1 {
+  padding: 12px 16px;
+  color: #fff;
+  font-family: var(--gilroy);
+}
+
+.burger-image {
+  position: absolute;
+  left: 500px;
+  top: 5px;
+}
+
+.burger-product-menu {
+  min-height: 1472px;
+  background-image: url("../img/burgers_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70vw;
+  overflow: hidden;
+}
+
+/* BLOCK-3 */
+.burger-product {
+  text-align: center;
+}
+
+/* ----- PRODUCT LIST -----*/
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+  padding: 60px 32px 180px;
+}
+
+.product-card > * {
+  flex-shrink: 0;
+}
+
+.product-description {
+  font-size: 14px;
+  font-family: var(--gilroy);
+  line-height: 1.4;
+  color: #fff;
+  text-align: start;
+  padding: 0;
+  margin-right: 20px;
+  min-height: 88px;
+}
+
+.product-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 350px;
+  height: 564px;
+  border: 1px solid;
+  border-color: #353535;
+  background-color: #211a16;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.product-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-footer {
+  min-width: 290px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.product-price {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.product-weight {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 300;
+  color: #757575;
+}
+
+.button-menu {
+  display: flex;
+  width: 182px;
+  height: 62px;
+  gap: 24px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #da8023 0%, #e2b438 100%);
+  border: 0;
+  align-items: center;
+  justify-content: center;
+}
+/* -------------------------------- */
+.delivery-block {
+  position: relative;
+  min-height: 875px;
+  background-image: url("../img/Group-4.png");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100vw;
+  overflow: hidden;
+}
+
+.delivery-image {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  overflow: hidden;
+  left: 300px;
+  top: 250px;
+}
+
+.gradient {
+  min-height: 875px;
+  background-image: url("../img/Group-4-gradient.png");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 55vw;
+  overflow: hidden;
+}
+
+.delivery-card {
+  position: absolute;
+  left: 800px;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 424px;
+  height: 555px;
+  border: 1px solid;
+  border-color: #353535;
+  background-color: #211a16;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.delivery-title {
+  padding: 60px 40px 40px;
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+}
+
+.order-label {
+  padding: 16px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 344px;
+  height: 62px;
+  border: 1px solid;
+  border-radius: 16px;
+  border-color: #da8023;
+  margin-bottom: 20px;
+  color: #757575;
+}
+
+.button-order {
+  display: flex;
+  width: 344px;
+  height: 62px;
+  gap: 24px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #da8023 0%, #e2b438 100%);
+  border: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 /* footer */
@@ -179,7 +431,7 @@ a {
 .footer-row {
   padding: 60px 0;
   color: #fff;
-  font-family: var(--Merriweather);
+  font-family: var(--gilroy);
   display: flex;
   align-items: center;
   gap: 10px;
